@@ -1,3 +1,7 @@
+# 使い方
+
+同梱の`fe9_normal_jp.vas`をLiveSplitで読み込ませて下さい。
+
 ## 映像キャプチャデバイス
 
 GV-USB2, Analog Capture
