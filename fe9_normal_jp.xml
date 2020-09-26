@@ -65,7 +65,7 @@
                         </Watcher>
                     </Watches>
                 </WatchZone>
-                <WatchZone>
+                <!-- <WatchZone>
                     <Name>EnemyPhase</Name>
                     <Geometry>
                         <X>119</X>
@@ -102,6 +102,30 @@
                             <WatchImages>
                                 <WatchImage>
                                     <FilePath>Image\playerphase.png</FilePath>
+                                </WatchImage>
+                            </WatchImages>
+                        </Watcher>
+                    </Watches>
+                </WatchZone> -->
+                <WatchZone>
+                    <Name>Phase</Name>
+                    <Geometry>
+                        <X>121</X>
+                        <Y>207</Y>
+                        <Width>100</Width>
+                        <Height>3</Height>
+                    </Geometry>
+                    <Watches>
+                        <Watcher>
+                            <Name>Phase</Name>
+                            <Equalize>false</Equalize>
+                            <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
+                            <WatchImages>
+                                <WatchImage>
+                                    <FilePath>Image\PPhase.png</FilePath>
+                                </WatchImage>
+                                <WatchImage>
+                                    <FilePath>Image\EPhase.png</FilePath>
                                 </WatchImage>
                             </WatchImages>
                         </Watcher>
@@ -164,6 +188,27 @@
                             <WatchImages>
                                 <WatchImage>
                                     <FilePath>Image\base02_black.png</FilePath>
+                                </WatchImage>
+                            </WatchImages>
+                        </Watcher>
+                    </Watches>
+                </WatchZone>
+                <WatchZone>
+                    <Name>menu</Name>
+                    <Geometry>
+                        <X>523</X>
+                        <Y>399</Y>
+                        <Width>152</Width>
+                        <Height>6</Height>
+                    </Geometry>
+                    <Watches>
+                        <Watcher>
+                            <Name>menu</Name>
+                            <Equalize>false</Equalize>
+                            <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
+                            <WatchImages>
+                                <WatchImage>
+                                    <FilePath>Image\menu.png</FilePath>
                                 </WatchImage>
                             </WatchImages>
                         </Watcher>
