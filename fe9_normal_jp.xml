@@ -42,7 +42,7 @@
                     <Watches>
                         <Watcher>
                             <Name>saveorload</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -76,7 +76,7 @@
                     <Watches>
                         <Watcher>
                             <Name>Enemy</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -97,7 +97,7 @@
                     <Watches>
                         <Watcher>
                             <Name>Player</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -118,7 +118,7 @@
                     <Watches>
                         <Watcher>
                             <Name>Phase</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -142,7 +142,7 @@
                     <Watches>
                         <Watcher>
                             <Name>01</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -173,7 +173,7 @@
                     <Watches>
                         <Watcher>
                             <Name>02</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -204,7 +204,7 @@
                     <Watches>
                         <Watcher>
                             <Name>menu</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>
@@ -225,7 +225,7 @@
                     <Watches>
                         <Watcher>
                             <Name>03</Name>
-                            <Equalize>false</Equalize>
+                            <Equalize>true</Equalize>
                             <ErrorMetric>PeakSignalToNoiseRatio</ErrorMetric>
                             <WatchImages>
                                 <WatchImage>

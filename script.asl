@@ -9,10 +9,9 @@ init {
 update {
     // state
     // if player phase
-    // if (features["playerphase"].current > 85.0 &&
-    //     features["playerphase"].old(1000) < 85.0) {
-    if (features["PPhase"].current > 85.0 &&
-        features["PPhase"].old(1000) < 85.0) {
+    if (features["PPhase"].current > 32.0 &&
+        features["PPhase"].old(1000) < 32.0 &&
+        !vars.isPlayerPhase) {
         vars.isPlayerPhase = true;
     }
 
@@ -20,12 +19,9 @@ update {
 
     // if enemy phase
     // also including timing flag
-    // if (features["enemyphase"].current > 85.0 &&
-    //     features["enemyphase"].old(1000) < 85.0) {
-    if (features["EPhase"].current > 85.0 &&
-        features["menu"].current < 85.0 &&
-        features["EPhase"].old(1000) < 85.0 &&
-        features["menu"].old(1000) > 85.0) {
+    if (features["EPhase"].current > 32.0 &&
+        features["EPhase"].old(1000) < 32.0 &&
+        vars.isPlayerPhase) {
         vars.isPlayerPhase = false;
         vars.isSplittable = true;
         print("Splitted: EnemyPhase");
@@ -34,25 +30,27 @@ update {
     // timing flag
     // if save state (and player phase)
     if (features["save_black"].current > 90.0 &&
-        features["save"].current < 95.0 &&
+        features["save"].current < 32.0 &&
         features["save_black"].old(500) < 90.0 &&
-        features["save"].old(500) > 95.0 &&
+        features["save"].old(500) > 32.0 &&
         vars.isPlayerPhase) {
+        vars.isPlayerPhase = false;
         vars.isSplittable = true;
-        print("Splitted: Save");
+        print ("Splitted: Save");
     }
 
     // if base out
     if (features["base01_black"].current > 90.0 &&
         features["base02_black"].current > 90.0 &&
-        features["base01"].current < 95.0 &&
-        features["base02"].current < 95.0 &&
+        features["base01"].current < 32.0 &&
+        features["base02"].current < 32.0 &&
         features["base01_black"].old(500) < 90.0 &&
         features["base02_black"].old(500) < 90.0 &&
-        features["base01"].old(500) > 95.0 &&
-        features["base02"].old(500) > 95.0) {
+        features["base01"].old(500) > 32.0 &&
+        features["base02"].old(500) > 32.0) {
+        vars.isPlayerPhase = true;
         vars.isSplittable = true;
-        print("Splitted: Base Out");
+        print ("Splitted: Base Out");
     }
 
     // split flag
@@ -67,18 +65,13 @@ update {
     }
 }
 
-start
-{
+start {
     return features["save_black"].current > 90.0 &&
-        features["load"].current < 95.0 &&
+        features["load"].current < 32.0 &&
         features["save_black"].old(500) < 90.0 &&
-        features["load"].old(500) > 95.0;
+        features["load"].old(500) > 32.0;
 }
-
-reset { }
 
 split {
     return vars.split;
 }
-
-isLoading { }
